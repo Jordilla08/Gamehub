@@ -40,12 +40,16 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem
             key={genre.id}
             paddingY="5px"
           >
-            <HStack>
+            <HStack
+              _hover={{
+                bgGradient: "linear(to-r, black, purple)",
+              }}
+            >
               <Image
                 boxSize="32px"
                 borderRadius={8}

@@ -33,6 +33,9 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
             onClick={() => onSelectSortOrder(order.value)}
             key={order.value}
             value={order.label}
+            _hover={{
+              bgGradient: "linear(to-r, black, purple)",
+            }}
           >
             {order.label}
           </MenuItem>
