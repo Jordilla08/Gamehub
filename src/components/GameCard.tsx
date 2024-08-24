@@ -1,4 +1,4 @@
-import { Game } from "../Hooks/useGames";
+import { Game } from "../entities/Game";
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
@@ -15,10 +15,7 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCropppedImageUrl(game.background_image)} />
       <CardBody>
-        <HStack
-          justifyContent="space-between"
-          marginBottom={3}
-        >
+        <HStack justifyContent="space-between" marginBottom={3}>
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           />
