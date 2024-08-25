@@ -1,4 +1,4 @@
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
@@ -8,7 +8,11 @@ interface Props {
 }
 const GameAttributes = ({ game }: Props) => {
   return (
-    <SimpleGrid columns={2} spacing={5} as="dl">
+    <SimpleGrid
+      columns={2}
+      spacing={5}
+      as="dl"
+    >
       <DefinitionItem term="Platforms">
         {game.parent_platforms?.map(({ platform }) => (
           <Text key={platform.id}>{platform.name}</Text>
